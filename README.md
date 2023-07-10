@@ -2,26 +2,29 @@
 AXP202 Power management IC（AXP202电源管理芯片）
 
 硬件部分开源在立创开源平台，链接地址：https://oshwhub.com/mondraker
+有时候周六周天不审核，工程会消失，可以在Github和Gitee看到备份
 
-##### 有问题直接进Q群轰炸我:735791683
-* ###### 为什么不用最新版AXP2101呢？首先AXP2101功能太多，目前DIY的小型设备根本用不了那么多。其次由于是主推产品价格相对较贵，是AXP202的10倍（不过要是有朋友需要后期也可以搞一个出来）
-*  ###### 该项目已经过长期验证，提供封装，3D文件等等，**资料充足（包含ESP-IDF例程以及Arduino例程，中英文手册）**，并且这个邮票孔自己打也**不需要额外收费**，不选半孔工艺自己磨一下就行了🤣
-*  ###### 一块芯片1.98元，其它都是阻容和电感，一片“自己整”**三块钱以内**
-*  ###### 相关资料、[BOM表单](https://easyeda.online/ibom/d5313712.html)以及元器件相关链接都在文末附件里
-*  ###### 过段时间自己会整一批沉金＋半孔工艺的模块出来，和雪花灯一起放在TB小店里：[奥特曼的电子星球](https://m.tb.cn/h.50LlvTB )
+##### 有问题直接进Q群轰炸我:735791683~~~~
+* 为什么不用最新版AXP2101呢？首先AXP2101功能太多，目前DIY的小型设备根本用不了那么多。其次由于是主推产品价格相对较贵，是AXP202的10倍（不过要是有朋友需要后期也可以搞一个出来）
+* 该项目已经过长期验证，提供封装，3D文件等等，**资料充足（包含ESP-IDF例程以及Arduino例程，中英文手册）**，并且这个邮票孔自己打也**不需要额外收费**，不选半孔工艺自己磨一下就行了🤣
+* 一块芯片1.8元，其它都是阻容和电感，一片“自己整”**三块钱以内**
+* 相关资料、[BOM表单](https://easyeda.online/ibom/d5313712.html)以及元器件相关链接都在文末附件里
+* 过段时间自己会整一批沉金＋半孔工艺的模块出来，和雪花灯一起放在TB小店里：[奥特曼的电子星球](https://m.tb.cn/h.50LlvTB )
 
 # 前言(闲聊)
-*  ###### Hello，大家好久不见，大半年没发新东西了，小伙伴都以为我隐退了。其实这段时间一直在闭关修炼，忙毕业设计，顺便学习一下ESP-IDF和LVGL。
-*  ###### 文章可能相对较长，但是这个模块确实非常好用，资料非常齐全，真心希望每一个感兴趣的朋友都可以将他掌握。
-*  ###### 当然了，后面整理一下资料会把自己这段时间的收获分享给大家。由于过两天要开源的开发板也用到了这个电源模块，因此先开源这个模块。（如下图）
+* Hello，大家好久不见，大半年没发新东西了，小伙伴都以为我隐退了。其实这段时间一直在闭关修炼，忙毕业设计，顺便学习一下ESP-IDF和LVGL。
+* 文章可能相对较长，但是这个模块确实非常好用，资料非常齐全，真心希望每一个感兴趣的朋友都可以将他掌握。
+* 当然了，后面整理一下资料会把自己这段时间的收获分享给大家。由于过两天要开源的开发板也用到了这个电源模块，因此先开源这个模块。（如下图）
 
 ###### [开源视频预告，直接点我](https://b23.tv/cWTMeIv)
-开发板
-![_d2b7bf79fa147069585608b29f912e74_2058421563_IMG_20230605_010226.jpg](//image.lceda.cn/pullimage/ffs1rgARrk4CGtXn6rGWq2N8uoxCKglhOAL40ilj.jpeg)
-模块
-![_319bb24bc89965f34b9631be8bfa4303_2043390142_IMG_20230405_053358.jpg](//image.lceda.cn/pullimage/SMMdKNWd08V15bfMRKzG1ZhsrKQnsLqi27Mgt0ra.jpeg)
-测试底板
-![_cbc7d0fb1028fe7791ffb7d338ac8aa4_-1316819711_IMG_20230405_214929.jpg](//image.lceda.cn/pullimage/q5st1CM3Uui1NpJAk5E47gbGW4pumzQHJbYmYjG8.jpeg)
+**开发板**
+* ![_d2b7bf79fa147069585608b29f912e74_2058421563_IMG_20230605_010226.jpg](//image.lceda.cn/pullimage/ffs1rgARrk4CGtXn6rGWq2N8uoxCKglhOAL40ilj.jpeg)
+**模块**
+* ![_319bb24bc89965f34b9631be8bfa4303_2043390142_IMG_20230405_053358.jpg](//image.lceda.cn/pullimage/SMMdKNWd08V15bfMRKzG1ZhsrKQnsLqi27Mgt0ra.jpeg)
+**测试底板**
+* ![_cbc7d0fb1028fe7791ffb7d338ac8aa4_-1316819711_IMG_20230405_214929.jpg](//image.lceda.cn/pullimage/q5st1CM3Uui1NpJAk5E47gbGW4pumzQHJbYmYjG8.jpeg)
+**注释过的原理图**
+* ![image.png](//image.lceda.cn/pullimage/YG8DJv3uosd4ePHwaZi5ePjpApeGVVDAMkGgtFpI.png)
 # 正文（AXP202电源管理芯片）
 ## 注意事项
 ### 由于芯片功能非常多，因此我分为以下几部分进行大致介绍
@@ -61,7 +64,7 @@ AXP202 Power management IC（AXP202电源管理芯片）
 
 ### 芯片参数
 **这里主要举例电源输出能力参数，其它电源参数去数据手册里看。（官方文档如下）**
-* ![image.png](//image.lceda.cn/pullimage/Is4jqwRJVhKE6GUkCBQjmRokMz80WG9mH7vZgnT2.png)
+* ![image.png](//image.lceda.cn/pullimage/LSnzo0pJiIUbIjNl9iX3ptXHtbDqOHgLBEbE5z4p.png)
 
 **如果你还需要5V输出，那么使用模块IPSOUT脚＋DCDC5V的buck电路即可轻松实现，输出能力取决于外部供电的输入能力，且芯片专门有一个EXTEN脚控制外部DCDC芯片的EN脚，节省NCU的功能引脚，太香了。（官方文档如下）**
 * ![image.png](//image.lceda.cn/pullimage/i5WTlJJDraZPyycNXcWMh9lPiVbAHHEAOXJBBj6d.png)
@@ -73,7 +76,7 @@ AXP202 Power management IC（AXP202电源管理芯片）
 * 为统一封装，本次设计使用了标准2.54mm间距LCC邮票孔，便于焊接，使用了4层PCB设计用以缩小封装体积，引出全部必要的功能。
 ### 应用场景
 **所有包含单片机的设备。（官方文档如下）**
-* ![image.png](//image.lceda.cn/pullimage/oXhlDMsuhwKDmTjJ8cTQgozwg9tINykDoM9aDGMA.png)
+* ![image.png](//image.lceda.cn/pullimage/HEQwvxnE6qjbVrJj8zVFqoB5K8cEPffItrp0ZkWl.png)
 
 ## 硬件部分
 ### 芯片外围电路
@@ -122,10 +125,11 @@ AXP202 Power management IC（AXP202电源管理芯片）
 
 ## 软件部分
 ### **[GitHub链接](https://github.com/HwzLoveDz/AXP202-PMIC)**
+### **[Gitee链接](https://gitee.com/mondraker/AXP202-PMIC)**
 ### 声明：
 * axp20x库以及Arduino相关例程，均来自于Lewis He大佬，感谢大佬的开源（开源协议：MIT）
 * 原GitHub链接： github:https://github.com/lewisxhe/AXP202X_Libraries
-* 后续自己的例程都将围绕该库编写，自己添加了其它一些常用的寄存器与功能，比如LED指示灯的充电控制等等，以后的修改将同步更新至GitHub
+* 后续自己的例程都将围绕该库编写，自己添加了其它一些常用的寄存器与功能，比如LED指示灯的充电控制等等，以后的修改将同步更新至GitHub/Gitee
 
 ### 说明：
 * 该库同时兼容AXP173/192/202等
@@ -136,6 +140,7 @@ AXP202 Power management IC（AXP202电源管理芯片）
 
 ## 视频以及相关链接部分
 * **[GitHub个人主页](https://github.com/HwzLoveDz)**
+* **[Gitee个人主页](https://gitee.com/mondraker)**
 * **[b站个人主页](https://space.bilibili.com/240319986)** **（这里有这次的AXP202(QFN)芯片焊接教程哦）**
 * **[在线BOM地址](https://easyeda.online/ibom/d5313712.html)** **（朋友开发，和ibom一样，但是是在线的，并且手机也可以浏览，后期会出一期文章重点介绍他）**
 * **QQ交流群号：735791683**
