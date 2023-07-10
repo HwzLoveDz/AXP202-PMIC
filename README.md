@@ -6,7 +6,7 @@ AXP202 Power management IC（AXP202电源管理芯片）
 |   文件名称(file name)   |      描述(description)  |
 |----------|:-------------:|
 | README_CN.md |  [中文文档(Chinese Document)](../README_CN.md)  |
-| README_EN.md |  [英文文档(English Document)](../README_EN.md)  |
+| README_EN.md |  [英文文档(English Document)](../README.md)  |
 
 ***
 
