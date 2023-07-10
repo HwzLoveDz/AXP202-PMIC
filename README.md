@@ -156,7 +156,7 @@ Sometimes if it is not reviewed on Saturdays and Sundays, the project will disap
 ## Video and related links section
 * **[GitHub profile](https://github.com/HwzLoveDz)**
 * **[Gitee profile](https://gitee.com/mondraker)**
-* **[B station personal homepage](https://space.bilibili.com/240319986)** **(here is the AXP202 (QFN) chip soldering tutorial)**
+* **[bilibili homepage](https://space.bilibili.com/240319986)** **(here is the AXP202 (QFN) chip soldering tutorial)**
 * **[Online BOM address](https://easyeda.online/ibom/d5313712.html)** **(developed by a friend, like ibom, but online, and mobile phone can also be browsed, a later issue will focus on him)**
 * **QQ Group Number: 735791683**
 * **Device purchase link in accessory BOM**
