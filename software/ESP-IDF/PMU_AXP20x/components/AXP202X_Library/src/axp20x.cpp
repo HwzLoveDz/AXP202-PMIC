@@ -1307,6 +1307,15 @@ int AXP20X_Class::setMeteringSystem(bool en)
     return AXP_PASS;
 }
 
+int AXP20X_Class::setChgLEDContrl(axp_chgled_control_t opt)
+{
+    uint8_t val = 0;
+    _readByte(AXP202_OFF_CTL, 1, &val);
+    val &= 0b11110111;
+    val |= opt;
+    _writeByte(AXP202_OFF_CTL, 1, &val);
+    return AXP_PASS;
+}
 
 int AXP20X_Class::setChgLEDMode(axp_chgled_mode_t mode)
 {
@@ -2285,3 +2294,5 @@ int AXP20X_Class::_writeByte(uint8_t reg, uint8_t nbytes, uint8_t *data)
 #endif
     return 0;
 }
+
+AXP20X_Class axp;

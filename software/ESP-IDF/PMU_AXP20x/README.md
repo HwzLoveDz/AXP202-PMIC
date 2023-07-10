@@ -1,1 +1,0 @@
-基本的功能验证，需要在menuconfig设置I2C与IRQ引脚

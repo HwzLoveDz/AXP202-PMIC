@@ -39,6 +39,10 @@ github:https://github.com/lewisxhe/AXP202X_Libraries
 /////////////////////////////////////////////////////////////////
 #pragma once
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #ifdef ARDUINO
 #include <Arduino.h>
 #include <Wire.h>
@@ -485,10 +489,15 @@ typedef enum {
 } axp_ldo5_table_t;
 
 typedef enum {
+    AXP20X_LED_CHARGING_CTL = 0,
+    AXP20X_LED_REG_32H_CTL  = 1,
+} axp_chgled_control_t;
+
+typedef enum {
     AXP20X_LED_OFF,
     AXP20X_LED_BLINK_1HZ,
     AXP20X_LED_BLINK_4HZ,
-    AXP20X_LED_LOW_LEVEL,
+    AXP20X_LED_LOW_LEVEL,   //Still Light
 } axp_chgled_mode_t;
 
 typedef enum {
@@ -840,7 +849,8 @@ public:
     int         enableIRQ(uint64_t params, bool en);
     int         readIRQ(void);
     void        clearIRQ(void);
-    
+
+    int         setChgLEDContrl(axp_chgled_control_t opt);
     int         setChgLEDMode(axp_chgled_mode_t mode);
 
     //! Only AXP202 support
@@ -943,3 +953,9 @@ private:
 #endif
     bool _isAxp173;
 };
+
+extern AXP20X_Class axp;
+
+#ifdef __cplusplus
+}
+#endif

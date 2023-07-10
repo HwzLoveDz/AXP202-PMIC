@@ -3,7 +3,7 @@
 # project subdirectory.
 #
 
-PROJECT_NAME := PMU_AXP202
+PROJECT_NAME := PMU_AXP202x
 
 include $(IDF_PATH)/make/project.mk
 
