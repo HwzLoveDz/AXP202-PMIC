@@ -21,6 +21,9 @@ Sometimes if it is not reviewed on Saturdays and Sundays, the project will disap
 * One chip 1.8 yuan, the rest are resistance, capacitance and inductance, a piece of "own whole" **within three dollars**
 * Related materials, [BOM form](https://easyeda.online/ibom/d5313712.html), and component-related links are attached at the end of the article
 * After a while, I will come out with a whole batch of modules of gold immersion + half-hole process, and put them in the TB shop together with snowflake lights: [Ultraman's electronic planet](https://m.tb.cn/h.50LlvTB )
+* This module **P2P is compatible with AXP209** power management chip, and the program is also compatible, but AXP209 has one more OTP decoder than AXP202, and the register can be operated in the code
+
+* * *
 
 # Preface (Small Talk)
 * Hello, everyone hasn't seen you for a long time, I haven't sent anything new for most of the year, and my friends think I'm retiring. In fact, I have been practicing in retreat during this time, busy with graduation projects, and learning ESP-IDF and LVGL by the way.
