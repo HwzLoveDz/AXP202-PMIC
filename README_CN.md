@@ -2,18 +2,18 @@
 AXP202 Power management IC（AXP202电源管理芯片）
 
 ![Static Badge](https://img.shields.io/badge/ESP_IDF_v5.0.1-build_pass-green) ![Static Badge](https://img.shields.io/badge/Arduino_IDE-build_pass-green)
-
-|   文件名称(file name)   |      描述(description)  |
-|----------|:-------------:|
-| README_CN.md |  [中文文档(Chinese Document)](../README_CN.md)  |
-| README_EN.md |  [英文文档(English Document)](../README_EN.md)  |
+  
+|   文件名称(file name)   |                描述(description)                    |
+|-------------------------|:--------------------------------------------------:|
+|       README_CN.md      |   [中文文档(Chinese Document)](../README_CN.md)     |
+|       README_EN.md      |   [英文文档(English Document)](../README.md)        |
 
 ***
 
 硬件部分开源在立创开源平台，链接地址：https://oshwhub.com/mondraker
 有时候周六周天不审核，工程会消失，可以在Github和Gitee看到备份
 
-##### 有问题直接进Q群轰炸我:735791683~~~~
+##### 有问题直接进Q群轰炸我:735791683🧨
 * 为什么不用最新版AXP2101呢？首先AXP2101功能太多，目前DIY的小型设备根本用不了那么多。其次由于是主推产品价格相对较贵，是AXP202的10倍（不过要是有朋友需要后期也可以搞一个出来）
 * 该项目已经过长期验证，提供封装，3D文件等等，**资料充足（包含ESP-IDF例程以及Arduino例程，中英文手册）**，并且这个邮票孔自己打也**不需要额外收费**，不选半孔工艺自己磨一下就行了🤣
 * 一块芯片1.8元，其它都是阻容和电感，一片“自己整”**三块钱以内**
