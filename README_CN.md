@@ -1,11 +1,14 @@
 # AXP202-PMIC
 AXP202 Power management IC（AXP202电源管理芯片）
 
-![Static Badge](https://img.shields.io/badge/ESP_IDF_v5.0.1-build_pass-green)
+![Static Badge](https://img.shields.io/badge/ESP_IDF_v5.0.1-build_pass-green) ![Static Badge](https://img.shields.io/badge/Arduino_IDE-build_pass-green)
 
-![Static Badge](https://img.shields.io/badge/Arduino-build_pass-green)
+|   文件名称(file name)   |      描述(description)  |
+|----------|:-------------:|
+| README_CN.md |  [中文文档(Chinese Document)](../README_CN.md)  |
+| README_EN.md |  [英文文档(English Document)](../README_EN.md)  |
 
-![Github stars](https://img.shields.io/github/stars/HwzLoveDz/AXP202-PMIC.svg)
+***
 
 硬件部分开源在立创开源平台，链接地址：https://oshwhub.com/mondraker
 有时候周六周天不审核，工程会消失，可以在Github和Gitee看到备份
