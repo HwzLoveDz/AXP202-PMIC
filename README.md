@@ -33,16 +33,16 @@ Sometimes if it is not reviewed on Saturdays and Sundays, the project will disap
 ###### [Open source video trailer, click me directly](https://b23.tv/cWTMeIv)
 
 **Development Board**
-* ![_d2b7bf79fa147069585608b29f912e74_2058421563_IMG_20230605_010226.jpg](//image.lceda.cn/pullimage/ffs1rgARrk4CGtXn6rGWq2N8uoxCKglhOAL40ilj.jpeg)
+* ![_d2b7bf79fa147069585608b29f912e74_2058421563_IMG_20230605_010226.jpg](http://image.lceda.cn/pullimage/ffs1rgARrk4CGtXn6rGWq2N8uoxCKglhOAL40ilj.jpeg)
 
 **Module**
-* ![_319bb24bc89965f34b9631be8bfa4303_2043390142_IMG_20230405_053358.jpg](//image.lceda.cn/pullimage/SMMdKNWd08V15bfMRKzG1ZhsrKQnsLqi27Mgt0ra.jpeg)
+* ![_319bb24bc89965f34b9631be8bfa4303_2043390142_IMG_20230405_053358.jpg](http://image.lceda.cn/pullimage/SMMdKNWd08V15bfMRKzG1ZhsrKQnsLqi27Mgt0ra.jpeg)
 
 **Test Baseplate**
-* ![_cbc7d0fb1028fe7791ffb7d338ac8aa4_-1316819711_IMG_20230405_214929.jpg](//image.lceda.cn/pullimage/q5st1CM3Uui1NpJAk5E47gbGW4pumzQHJbYmYjG8.jpeg)
+* ![_cbc7d0fb1028fe7791ffb7d338ac8aa4_-1316819711_IMG_20230405_214929.jpg](http://image.lceda.cn/pullimage/q5st1CM3Uui1NpJAk5E47gbGW4pumzQHJbYmYjG8.jpeg)
 
 **Commented schematics**
-* ![image.png](//image.lceda.cn/pullimage/YG8DJv3uosd4ePHwaZi5ePjpApeGVVDAMkGgtFpI.png)
+* ![image.png](http://image.lceda.cn/pullimage/YG8DJv3uosd4ePHwaZi5ePjpApeGVVDAMkGgtFpI.png)
 # Body (AXP202 Power Management Chip)
 ## Notes
 ### Since the chip has so many functions, I will divide it into the following parts for a general introduction
@@ -71,21 +71,21 @@ Sometimes if it is not reviewed on Saturdays and Sundays, the project will disap
 * What to do with low power consumption, what to do, what to do
 
 **Well, I'll tell you now that there is a chip that can implement all the above functions, and is small in size, high efficiency, low in power consumption, and attractive in price???**
-![URnAH7cTv6gCuqOy5Z4qxFvb3I1NyOPSmuxq8xZs.jpg](//image.lceda.cn/pullimage/7qMHDGjPcgOlcNlfwt1rZ9sW9wYM6GS07yrAI2Au.jpeg)
+![URnAH7cTv6gCuqOy5Z4qxFvb3I1NyOPSmuxq8xZs.jpg](http://image.lceda.cn/pullimage/7qMHDGjPcgOlcNlfwt1rZ9sW9wYM6GS07yrAI2Au.jpeg)
 
 ### Chip function
 **1. on the function. (Official documentation is below)**
-* ![image.png](//image.lceda.cn/pullimage/7w72JYYedE5s0W1BAYEc86i5ZDeMrI5z0zby43St.png)
+* ![image.png](http://image.lceda.cn/pullimage/7w72JYYedE5s0W1BAYEc86i5ZDeMrI5z0zby43St.png)
 
 **2. on the overview. (Official documentation is below)**
-* ![image.png](//image.lceda.cn/pullimage/GP2aJmtgdLcGMumzadhl4XKqPvvHQUc1MoMuQIt3.png)
+* ![image.png](http://image.lceda.cn/pullimage/GP2aJmtgdLcGMumzadhl4XKqPvvHQUc1MoMuQIt3.png)
 
 ### Chip parameters
 **Here are mainly examples of power output capability parameters, other power parameters go to the data sheet. (Official documentation is below)**
-* ![image.png](//image.lceda.cn/pullimage/LSnzo0pJiIUbIjNl9iX3ptXHtbDqOHgLBEbE5z4p.png)
+* ![image.png](http://image.lceda.cn/pullimage/LSnzo0pJiIUbIjNl9iX3ptXHtbDqOHgLBEbE5z4p.png)
 
 **If you also need 5V output, then the use of module IPSOUT pin + DCDC5V buck circuit can be easily achieved, the output capability depends on the input capability of the external power supply, and the chip has an EXTEN pin to control the EN pin of the external DCDC chip, saving the functional pin of the NCU, too fragrant. (Official documentation is below)**
-* ![image.png](//image.lceda.cn/pullimage/i5WTlJJDraZPyycNXcWMh9lPiVbAHHEAOXJBBj6d.png)
+* ![image.png](http://image.lceda.cn/pullimage/i5WTlJJDraZPyycNXcWMh9lPiVbAHHEAOXJBBj6d.png)
 
 ### Design ideas
 **It is convenient to use the stamp hole module type directly, because the resistance and capacitance parameters on the periphery of this chip are relatively strange.**
@@ -94,7 +94,7 @@ Sometimes if it is not reviewed on Saturdays and Sundays, the project will disap
 * In order to unify the package, the design uses a standard 2.54mm pitch LCC stamp hole for easy soldering, and a 4-layer PCB design is used to reduce the package size and bring out all the necessary functions.
 ### Application scenario
 **All devices containing a microcontroller. (Official documentation is below)**
-* ![image.png](//image.lceda.cn/pullimage/HEQwvxnE6qjbVrJj8zVFqoB5K8cEPffItrp0ZkWl.png)
+* ![image.png](http://image.lceda.cn/pullimage/HEQwvxnE6qjbVrJj8zVFqoB5K8cEPffItrp0ZkWl.png)
 
 ## Hardware section
 ### Chip peripheral circuitry
@@ -108,38 +108,38 @@ Sometimes if it is not reviewed on Saturdays and Sundays, the project will disap
 
 * Finally, there is the LDO (Low Dropout Linear Regulator) output section, **see the lower right area of the figure**. This part is also a separate area in the functional block diagram, which requires an external access system to supply ISPOUT. PWROK is the MCU enable pin, and the RESET button is connected to the EN pin of the MCU to restart the MCU and pull up to the MCU power supply pin. DC3SET sets the pin for DCDC3 voltage, 3.3V/2.5V for APS or LDO1, 1.8V for ground, and 1.2V/1.5V for floating.
 
-* ![image.png](//image.lceda.cn/pullimage/X4woxNgmqruelxnTaWXAmYhlLGWWm0RNQDbuJxbt.png)
+* ![image.png](http://image.lceda.cn/pullimage/X4woxNgmqruelxnTaWXAmYhlLGWWm0RNQDbuJxbt.png)
 
 ### Module peripheral circuit
 **The picture below is very detailed, not to be repeated**
 
-* ! [image.png](//image.lceda.cn/pullimage/VszxQchkluWsXu4dG2SMuFcAxNRDk1XwAHZYWBdA.png)
+* ! [image.png](http://image.lceda.cn/pullimage/VszxQchkluWsXu4dG2SMuFcAxNRDk1XwAHZYWBdA.png)
 
 ### Power module test backplane explanation
 **As shown in the figure above, all functions are introduced, some pins that can be set externally on the chip can be set using a jump cap, and a 5V DCDC boost is added for basic testing, and the ground wire leads less and can be added at your discretion. Or draw a test board according to the main control chip to be used, my test base board is only used to screen which chip is suitable and basic functional testing, because I directly drew the ESP32 test board, so I did not continue to optimize this base board (there may be a breadboard module later).**
 
 ### Wiring of the power module in the circuit
 **Compared with ordinary I2C modules, the power management module also provides power to the main control chip, in addition, AXP202 must be in the boot state, must be common, otherwise the two can not communicate normally.**
-* ![image.png](//image.lceda.cn/pullimage/nLxiASZE4IW4GAFWith4E4AoF3nTgg6F819VBKs1.png)
+* ![image.png](http://image.lceda.cn/pullimage/nLxiASZE4IW4GAFWith4E4AoF3nTgg6F819VBKs1.png)
 
 ### PCB parameters and stamp hole handling considerations
 **Place a single 1mm (the picture below is 1.6mm very thick, just for demonstration purposes), four layers. There is no need for the half-hole process, after coming back, it is crimped, and you need to use tweezers to cut out the excess copper in the half-hole, and then grind it off with sandpaper of about 800 mesh. (The following is a simple step-by-step demonstration)**
 
 * Before processing (silver for OK, yellow for OK)
-* ![image.png](//image.lceda.cn/pullimage/lRpBQKPbU0i1J5V6IaK7F4ISxZmJc6iSZmtUagZd.png)
+* ![image.png](http://image.lceda.cn/pullimage/lRpBQKPbU0i1J5V6IaK7F4ISxZmJc6iSZmtUagZd.png)
 * Processing (tweezers pick out)
-* ![image.png](//image.lceda.cn/pullimage/jOGUzUurIuknZpiqp5UKYJd5lZsCd9RF7YCeC2fh.png)
+* ![image.png](http://image.lceda.cn/pullimage/jOGUzUurIuknZpiqp5UKYJd5lZsCd9RF7YCeC2fh.png)
 * Processing (after picking out)
-* ![image.png](//image.lceda.cn/pullimage/N860zAH1iG7s5QtRMuuAAezCrEGovbtPjySwvReO.png)
-* ![image.png](//image.lceda.cn/pullimage/nm9qtwo0qybdDF7w6k0nKtD5P99uqkNjXUiJoUMo.png)
+* ![image.png](http://image.lceda.cn/pullimage/N860zAH1iG7s5QtRMuuAAezCrEGovbtPjySwvReO.png)
+* ![image.png](http://image.lceda.cn/pullimage/nm9qtwo0qybdDF7w6k0nKtD5P99uqkNjXUiJoUMo.png)
 * In process (sanding)
 * There is no picture, don't try too hard, grind and take a look, don't grind the copper on the edge of the board.
 * After treatment (you can use higher mesh sandpaper to polish it finely)
-* ![image.png](//image.lceda.cn/pullimage/BOd3kRjWBB3XF0VdpwqmbQaYnDy1I1ulPjdFDVEL.png)
+* ![image.png](http://image.lceda.cn/pullimage/BOd3kRjWBB3XF0VdpwqmbQaYnDy1I1ulPjdFDVEL.png)
 
 ### PS
 **The hole on the top of the module is for easy disassembly and assembly**
-* ![image.png](//image.lceda.cn/pullimage/MesyEzT6YU60ztrWkv2JfnCbp4E7RthF5Hh8JRpx.png)
+* ![image.png](http://image.lceda.cn/pullimage/MesyEzT6YU60ztrWkv2JfnCbp4E7RthF5Hh8JRpx.png)
 
 ## Software section
 ### **[GitHub link](https://github.com/HwzLoveDz/AXP202-PMIC)**
