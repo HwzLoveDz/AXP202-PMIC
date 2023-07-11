@@ -71,6 +71,7 @@ Sometimes if it is not reviewed on Saturdays and Sundays, the project will disap
 * What to do with low power consumption, what to do, what to do
 
 **Well, I'll tell you now that there is a chip that can implement all the above functions, and is small in size, high efficiency, low in power consumption, and attractive in price???**
+
 ![URnAH7cTv6gCuqOy5Z4qxFvb3I1NyOPSmuxq8xZs.jpg](http://image.lceda.cn/pullimage/7qMHDGjPcgOlcNlfwt1rZ9sW9wYM6GS07yrAI2Au.jpeg)
 
 ### Chip function
