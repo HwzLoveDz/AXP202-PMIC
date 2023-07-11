@@ -30,13 +30,13 @@ AXP202 Power management IC（AXP202电源管理芯片）
 
 ###### [开源视频预告，直接点我](https://b23.tv/cWTMeIv)
 **开发板**
-* ![_d2b7bf79fa147069585608b29f912e74_2058421563_IMG_20230605_010226.jpg](//image.lceda.cn/pullimage/ffs1rgARrk4CGtXn6rGWq2N8uoxCKglhOAL40ilj.jpeg)
+* ![_d2b7bf79fa147069585608b29f912e74_2058421563_IMG_20230605_010226.jpg](http://image.lceda.cn/pullimage/ffs1rgARrk4CGtXn6rGWq2N8uoxCKglhOAL40ilj.jpeg)
 **模块**
-* ![_319bb24bc89965f34b9631be8bfa4303_2043390142_IMG_20230405_053358.jpg](//image.lceda.cn/pullimage/SMMdKNWd08V15bfMRKzG1ZhsrKQnsLqi27Mgt0ra.jpeg)
+* ![_319bb24bc89965f34b9631be8bfa4303_2043390142_IMG_20230405_053358.jpg](http://image.lceda.cn/pullimage/SMMdKNWd08V15bfMRKzG1ZhsrKQnsLqi27Mgt0ra.jpeg)
 **测试底板**
-* ![_cbc7d0fb1028fe7791ffb7d338ac8aa4_-1316819711_IMG_20230405_214929.jpg](//image.lceda.cn/pullimage/q5st1CM3Uui1NpJAk5E47gbGW4pumzQHJbYmYjG8.jpeg)
+* ![_cbc7d0fb1028fe7791ffb7d338ac8aa4_-1316819711_IMG_20230405_214929.jpg](http://image.lceda.cn/pullimage/q5st1CM3Uui1NpJAk5E47gbGW4pumzQHJbYmYjG8.jpeg)
 **注释过的原理图**
-* ![image.png](//image.lceda.cn/pullimage/YG8DJv3uosd4ePHwaZi5ePjpApeGVVDAMkGgtFpI.png)
+* ![image.png](http://image.lceda.cn/pullimage/YG8DJv3uosd4ePHwaZi5ePjpApeGVVDAMkGgtFpI.png)
 # 正文（AXP202电源管理芯片）
 ## 注意事项
 ### 由于芯片功能非常多，因此我分为以下几部分进行大致介绍
@@ -65,21 +65,21 @@ AXP202 Power management IC（AXP202电源管理芯片）
 * 低功耗怎么办怎么办怎么办怎么办怎么办怎么办
 
 **那么好，我现在告诉你，有一个芯片，他可以实现上述的所有功能，并且体积小、效率高、功耗低、价格香你心动吗？？？**
-![URnAH7cTv6gCuqOy5Z4qxFvb3I1NyOPSmuxq8xZs.jpg](//image.lceda.cn/pullimage/7qMHDGjPcgOlcNlfwt1rZ9sW9wYM6GS07yrAI2Au.jpeg)
+![URnAH7cTv6gCuqOy5Z4qxFvb3I1NyOPSmuxq8xZs.jpg](http://image.lceda.cn/pullimage/7qMHDGjPcgOlcNlfwt1rZ9sW9wYM6GS07yrAI2Au.jpeg)
 
 ### 芯片功能
 **1. 上功能。（官方文档如下）**
-* ![image.png](//image.lceda.cn/pullimage/7w72JYYedE5s0W1BAYEc86i5ZDeMrI5z0zby43St.png)
+* ![image.png](http://image.lceda.cn/pullimage/7w72JYYedE5s0W1BAYEc86i5ZDeMrI5z0zby43St.png)
 
 **2. 上概述。（官方文档如下）**
-* ![image.png](//image.lceda.cn/pullimage/GP2aJmtgdLcGMumzadhl4XKqPvvHQUc1MoMuQIt3.png)
+* ![image.png](http://image.lceda.cn/pullimage/GP2aJmtgdLcGMumzadhl4XKqPvvHQUc1MoMuQIt3.png)
 
 ### 芯片参数
 **这里主要举例电源输出能力参数，其它电源参数去数据手册里看。（官方文档如下）**
-* ![image.png](//image.lceda.cn/pullimage/LSnzo0pJiIUbIjNl9iX3ptXHtbDqOHgLBEbE5z4p.png)
+* ![image.png](http://image.lceda.cn/pullimage/LSnzo0pJiIUbIjNl9iX3ptXHtbDqOHgLBEbE5z4p.png)
 
 **如果你还需要5V输出，那么使用模块IPSOUT脚＋DCDC5V的buck电路即可轻松实现，输出能力取决于外部供电的输入能力，且芯片专门有一个EXTEN脚控制外部DCDC芯片的EN脚，节省NCU的功能引脚，太香了。（官方文档如下）**
-* ![image.png](//image.lceda.cn/pullimage/i5WTlJJDraZPyycNXcWMh9lPiVbAHHEAOXJBBj6d.png)
+* ![image.png](http://image.lceda.cn/pullimage/i5WTlJJDraZPyycNXcWMh9lPiVbAHHEAOXJBBj6d.png)
 
 ### 设计思路
 **做成邮票孔模块类型方便大家直接使用，因为这种芯片外围的阻容参数都比较奇怪。**
@@ -88,7 +88,7 @@ AXP202 Power management IC（AXP202电源管理芯片）
 * 为统一封装，本次设计使用了标准2.54mm间距LCC邮票孔，便于焊接，使用了4层PCB设计用以缩小封装体积，引出全部必要的功能。
 ### 应用场景
 **所有包含单片机的设备。（官方文档如下）**
-* ![image.png](//image.lceda.cn/pullimage/HEQwvxnE6qjbVrJj8zVFqoB5K8cEPffItrp0ZkWl.png)
+* ![image.png](http://image.lceda.cn/pullimage/HEQwvxnE6qjbVrJj8zVFqoB5K8cEPffItrp0ZkWl.png)
 
 ## 硬件部分
 ### 芯片外围电路
@@ -102,38 +102,38 @@ AXP202 Power management IC（AXP202电源管理芯片）
 
 * 最后是LDO（低压差线性稳压器）输出部分，**如图右下方区域**。该部分在功能框图中同样为独立区域，需要外部接入系统供电ISPOUT。PWROK为MCU使能引脚，RESET按键接在MCU的EN管脚上可以实现MCU的重启，上拉至MCU供电脚。DC3SET为DCDC3电压设置管脚，接APS或LDO1为3.3V/2.5V，接地为1.8V，悬空为1.2V/1.5V。
 
-* ![image.png](//image.lceda.cn/pullimage/X4woxNgmqruelxnTaWXAmYhlLGWWm0RNQDbuJxbt.png)
+* ![image.png](http://image.lceda.cn/pullimage/X4woxNgmqruelxnTaWXAmYhlLGWWm0RNQDbuJxbt.png)
 
 ### 模块外围电路
 **下图中写的很详细，不在赘述**
 
-* ![image.png](//image.lceda.cn/pullimage/VszxQchkluWsXu4dG2SMuFcAxNRDk1XwAHZYWBdA.png)
+* ![image.png](http://image.lceda.cn/pullimage/VszxQchkluWsXu4dG2SMuFcAxNRDk1XwAHZYWBdA.png)
 
 ### 电源模块测试底板讲解
 **如上图引出了所有的功能，芯片外部可设置的一些引脚可以使用跳帽设置，并且加入了一个5V的DCDC升压，用以基本测试，地线引出较少，可以自己酌情添加。或者根据要使用的主控芯片自己绘制一个测试板，我这个测试底板只是用以筛选哪家芯片合适以及基本的功能测试，因为自己直接画了ESP32的测试板所以没有再继续优化这个底板（后续可能会有面包板模块吧）。**
 
 ### 电源模块在电路中的接线
 **相较于普通的I2C模块，电源管理模块还要给主控芯片提供电源，除此之外，AXP202必须在开机状态下，一定要共地，否则两者之间是无法正常通信的。**
-![image.png](//image.lceda.cn/pullimage/nLxiASZE4IW4GAFWith4E4AoF3nTgg6F819VBKs1.png)
+![image.png](http://image.lceda.cn/pullimage/nLxiASZE4IW4GAFWith4E4AoF3nTgg6F819VBKs1.png)
 
 ### PCB参数与邮票孔处理注意事项
 **下单打1mm（下面图是1.6mm的非常厚，仅用以演示），四层。不需要半孔工艺，回来之后是卷边的，需要先用镊子把半孔里多余的铜抠出来，然后用800目左右砂纸磨掉就行了。（以下是简单的步骤演示）**
 
 * 处理前（银色代表OK，黄色代表不OK）
-* ![image.png](//image.lceda.cn/pullimage/lRpBQKPbU0i1J5V6IaK7F4ISxZmJc6iSZmtUagZd.png)
+* ![image.png](http://image.lceda.cn/pullimage/lRpBQKPbU0i1J5V6IaK7F4ISxZmJc6iSZmtUagZd.png)
 * 处理中（镊子挑出来）
-* ![image.png](//image.lceda.cn/pullimage/jOGUzUurIuknZpiqp5UKYJd5lZsCd9RF7YCeC2fh.png)
+* ![image.png](http://image.lceda.cn/pullimage/jOGUzUurIuknZpiqp5UKYJd5lZsCd9RF7YCeC2fh.png)
 * 处理中（挑出来之后）
-* ![image.png](//image.lceda.cn/pullimage/N860zAH1iG7s5QtRMuuAAezCrEGovbtPjySwvReO.png)
-* ![image.png](//image.lceda.cn/pullimage/nm9qtwo0qybdDF7w6k0nKtD5P99uqkNjXUiJoUMo.png)
+* ![image.png](http://image.lceda.cn/pullimage/N860zAH1iG7s5QtRMuuAAezCrEGovbtPjySwvReO.png)
+* ![image.png](http://image.lceda.cn/pullimage/nm9qtwo0qybdDF7w6k0nKtD5P99uqkNjXUiJoUMo.png)
 * 处理中（打磨打磨）
 * 没图了，别太用力就行，磨一磨看一看，别把板边的铜磨出来了。
 * 处理后（自己可以用更高目砂纸精细打磨一下）
-* ![image.png](//image.lceda.cn/pullimage/BOd3kRjWBB3XF0VdpwqmbQaYnDy1I1ulPjdFDVEL.png)
+* ![image.png](http://image.lceda.cn/pullimage/BOd3kRjWBB3XF0VdpwqmbQaYnDy1I1ulPjdFDVEL.png)
 
 ### PS
 **模块上面那个洞是为了方便拆装的**
-* ![image.png](//image.lceda.cn/pullimage/MesyEzT6YU60ztrWkv2JfnCbp4E7RthF5Hh8JRpx.png)
+* ![image.png](http://image.lceda.cn/pullimage/MesyEzT6YU60ztrWkv2JfnCbp4E7RthF5Hh8JRpx.png)
 
 ## 软件部分
 ### **[GitHub链接](https://github.com/HwzLoveDz/AXP202-PMIC)**
