@@ -113,7 +113,7 @@ Sometimes if it is not reviewed on Saturdays and Sundays, the project will disap
 ### Module peripheral circuit
 **The picture below is very detailed, not to be repeated**
 
-* ! [image.png](http://image.lceda.cn/pullimage/VszxQchkluWsXu4dG2SMuFcAxNRDk1XwAHZYWBdA.png)
+* ![image.png](http://image.lceda.cn/pullimage/VszxQchkluWsXu4dG2SMuFcAxNRDk1XwAHZYWBdA.png)
 
 ### Power module test backplane explanation
 **As shown in the figure above, all functions are introduced, some pins that can be set externally on the chip can be set using a jump cap, and a 5V DCDC boost is added for basic testing, and the ground wire leads less and can be added at your discretion. Or draw a test board according to the main control chip to be used, my test base board is only used to screen which chip is suitable and basic functional testing, because I directly drew the ESP32 test board, so I did not continue to optimize this base board (there may be a breadboard module later).**
