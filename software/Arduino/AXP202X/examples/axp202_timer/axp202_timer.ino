@@ -25,7 +25,7 @@ SOFTWARE.
 #include <axp20x.h>
 
 
-AXP20X_Class axp;
+// AXP20X_Class axp;
 bool  axpIrq = 0;
 uint8_t second = 0;
 uint32_t timer = 0;

@@ -1,7 +1,7 @@
 #include <Wire.h>
 #include <axp20x.h>
 
-AXP20X_Class axp;
+// AXP20X_Class axp;
 
 const uint8_t i2c_sda = 21;
 const uint8_t i2c_scl = 22;

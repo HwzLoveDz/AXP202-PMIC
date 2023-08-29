@@ -24,7 +24,7 @@ SOFTWARE.
 
 #include "axp20x.h"
 
-AXP20X_Class axp;
+// AXP20X_Class axp;
 const uint8_t i2c_sda = 21;
 const uint8_t i2c_scl = 22;
 const uint8_t slave_address = AXP192_SLAVE_ADDRESS;             //use axp192

@@ -24,7 +24,7 @@ SOFTWARE.
 #include <Wire.h>
 #include <axp20x.h>
 
-AXP20X_Class axp;
+// AXP20X_Class axp;
 bool  axpIrq = 0;
 
 const uint8_t i2c_sda = 21;

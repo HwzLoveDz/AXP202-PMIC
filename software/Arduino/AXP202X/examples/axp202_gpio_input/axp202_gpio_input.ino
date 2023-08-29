@@ -24,7 +24,7 @@ SOFTWARE.
 #include <Wire.h>
 #include <axp20x.h>
 
-AXP20X_Class axp;
+// AXP20X_Class axp;
 
 const uint8_t i2c_sda = 21;
 const uint8_t i2c_scl = 22;
@@ -34,7 +34,7 @@ void setup()
     Serial.begin(115200);
     Wire.begin(i2c_sda, i2c_scl);
 
-    int ret = axp.begin(Wire);
+    int ret = axp.begin(Wire, 0x34);
 
     if (ret == AXP_FAIL) {
         Serial.println("AXP Power begin failed");
