@@ -75,7 +75,7 @@ static void axp_irq_init()
     gpio_evt_queue = xQueueCreate(10, sizeof(uint32_t));
 }
 
-static void axp_config_init()
+static void axp_init()
 {
     if (axp.begin(twi_read, twi_write, AXP202_SLAVE_ADDRESS))
     {
@@ -83,7 +83,10 @@ static void axp_config_init()
         while (1);
     }
     ESP_LOGI(TAG, "Success init axp20x !!!");
+}
 
+static void axp_config()
+{
     // 两个警告等级（类似于手机20%一提醒，10%一提醒）和一个关机电压（类似于手机3%关机，实际显示0%）
     axp.setVWarningLevel1(3450);
     axp.setVWarningLevel2(3400);
@@ -188,16 +191,76 @@ static void axp_config_init()
     axp.gpioWrite(AXP_GPIO_0, 1);
 }
 
+static void axp_info()
+{
+    if (axp.isDCDC2Enable())
+    {
+        ESP_LOGI(TAG, "DC2: %u mV", axp.getDCDC2Voltage());
+    }
+    else
+    {
+        ESP_LOGI(TAG, "DC2: DISABLE");
+    }
+
+    if (axp.isDCDC3Enable())
+    {
+        ESP_LOGI(TAG, "DC3: %u mV", axp.getDCDC3Voltage());
+    }
+    else
+    {
+        ESP_LOGI(TAG, "DC3: DISABLE");
+    }
+
+    if (axp.isLDO2Enable())
+    {
+        ESP_LOGI(TAG, "LDO2: %u mV", axp.getLDO2Voltage());
+    }
+    else
+    {
+        ESP_LOGI(TAG, "LDO2: DISABLE");
+    }
+
+    if (axp.isLDO3Enable())
+    {
+        ESP_LOGI(TAG, "LDO3: %u mV", axp.getLDO3Voltage());
+    }
+    else
+    {
+        ESP_LOGI(TAG, "LDO3: DISABLE");
+    }
+
+    if (axp.isLDO4Enable())
+    {
+        ESP_LOGI(TAG, "LDO4: %u mV", axp.getLDO4Voltage());
+    }
+    else
+    {
+        ESP_LOGI(TAG, "LDO4: DISABLE");
+    }
+
+    if (axp.isExtenEnable())
+    {
+        ESP_LOGI(TAG, "Exten: ENABLE");
+    }
+    else
+    {
+        ESP_LOGI(TAG, "Exten: DISABLE");
+    }
+}
 
 extern "C" void app_main(void)
 {
     ESP_ERROR_CHECK(i2c_master_init());
 
+    axp_init();
+
+    axp_info();
+
     axp_irq_init();
 
-    axp_config_init();
+    axp_config();
 
-    //! Enable all irq channel
+    // //! Enable all irq channel
     axp.enableIRQ(AXP202_ALL_IRQ, true);
 
     axp.clearIRQ();
